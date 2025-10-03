@@ -1,0 +1,1 @@
+from myinherit2 import Father, Mother

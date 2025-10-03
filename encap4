@@ -1,0 +1,25 @@
+class GTBank:
+    def __int__(self,acc_name,acc_type,acc_balance):
+        self.acc_name = acc_name
+        self._acc_type = acc_type
+        self.__acc_balance = acc_balance
+
+    def deposit(self,amount):
+        if amount > 0:
+            self.__acc_balance += amount
+        else:
+            print ("work hard")
+        
+    def withdrawal(self,amount):
+        if amount <= self.__acc_balance:
+            self.__acc_balance -= amount
+        else:
+            print ("you broke")
+        
+    def get_balance(self):
+        return self.__acc_balance
+    
+acc = GTBank("funbi","savings",60000)
+
+print(GTBank.acc_name)
+
