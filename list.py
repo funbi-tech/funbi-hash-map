@@ -24,4 +24,22 @@ result = two_sum_with_hash_map(my_list, target)
 print(result)
 
 
+# trying to modify code to return indices of two numbers
+def two_sum_indices(my_list, target):
+    seen = {}  # to store the nunbers and also indexes
+    for index, num in enumerate(my_list):  #getting  numbers and index at the same time
+        complement = target - num  # i think the code is trying to calculate the numbers that acn add up to target here
+        if complement in seen:  # code is able to achieve its course here
+            return [seen[complement], index]
+        
+    
+        seen[num] = index # cant explain the line
+
+my_list = [2,7,11,15]
+target = 9
+# only f string seem to work
+print(f"Input: {my_list}, Target: {target}")  
+
+print(f"Output: {two_sum_indices(my_list, target)}")
+
 
